@@ -1,0 +1,20 @@
+{
+    "1": {
+        "name": "Raees Ahmed",
+        "major": "Computer Science",
+        "total_attendance": 73,
+        "last_attendance_time": "2024-12-24 07:37:34",
+        "Grade": "A",
+        "Year": "3",
+        "Starting_year": "2021"
+    },
+    "2": {
+        "name": "Ankit",
+        "major": "Electrical Engineering",
+        "total_attendance": 8,
+        "last_attendance_time": "2024-12-24 06:12:20",
+        "Grade": "B",
+        "Year": "2",
+        "Starting_year": "2022"
+    }
+}

@@ -28,7 +28,6 @@ packaging==24.0
 pillow==10.3.0
 pyjokes==0.6.0
 pyparsing==3.1.2
-pypiwin32==223
 python-dateutil==2.9.0.post0
 pyttsx3==2.90
 pywin32==306

@@ -2,13 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>AttendEase</title>
     <script
       type="module"
       src="https://unpkg.com/@splinetool/viewer@1.9.54/build/spline-viewer.js"
     ></script>
+
     <style>
       body {
         overflow: hidden;
@@ -50,12 +50,12 @@
         border-radius: 2rem;
       }
       span {
-    transition: transform 0.3s ease; /* Smooth transition */
-}
+        transition: transform 0.3s ease; /* Smooth transition */
+      }
 
-span:hover {
-    transform: scale(1.1); /* Slightly enlarges on hover */
-}
+      span:hover {
+        transform: scale(1.1); /* Slightly enlarges on hover */
+      }
 
       .sections {
         display: flex;
@@ -134,11 +134,82 @@ span:hover {
         }
       }
     </style>
+    <style>
+      .loaderr {
+        
+        height: 5px;
+        width: 250px;
+        --c: no-repeat linear-gradient(#6100ee 0 0);
+        background: var(--c), var(--c), #d7b8fc;
+        background-size: 60% 100%;
+        animation: l16 3s infinite;
+      }
+      @keyframes l16 {
+        0% {
+          background-position: -150% 0, -150% 0;
+        }
+        66% {
+          background-position: 250% 0, -150% 0;
+        }
+        100% {
+          background-position: 250% 0, 250% 0;
+        }
+      }
+
+      /* Message for smaller screens */
+      .small-screen-message {
+        display: none;
+      }
+
+      /* Media query for small screens */
+      @media (max-width: 768px) {
+        .text,
+        .hero {
+          filter: blur(5px); /* Apply blur to the body */
+        }
+        .text {
+          align-items: center;
+        }
+        spline-viewer {
+          display: none;
+        }
+        body {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .small-screen-message {
+          display: flex;
+        }
+        .small-screen-message {
+          display: none;
+          position: absolute;
+          top: 0;
+          left: 0px;
+          width: 100%;
+          padding: 0rem;
+          height: 100%;
+          /* background: rgb(0 0 0 / 41%); */
+          color: #000000;
+          font-size: 1.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          z-index: 10000;
+        }
+      }
+    </style>
   </head>
   <body>
+    <div class="small-screen-message">
+      Please use a device like a PC to view this website.
+    </div>
+
     <!-- Loader overlay -->
     <div class="loader-overlay" id="loader">
-      <div class="loader"></div>
+      <div class="loaderr"></div>
     </div>
 
     <!-- Spline Viewer -->

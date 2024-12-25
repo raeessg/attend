@@ -61,7 +61,6 @@ while True:
             if matches[matchIndex]:
                 id = studentIds[matchIndex]
                 print(f"Match found for ID: {id}")
-
                 studentInfo = student_data.get(str(id), None)
                 if studentInfo:
                     # Parse last attendance time
